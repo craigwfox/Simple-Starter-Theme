@@ -16,7 +16,7 @@
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 		<meta charset="utf-8" />
-		<title><?php bloginfo('name') ?> // <?php bloginfo('description'); ?></title>
+		<title><?php bloginfo('name') ?> <?php wp_title(); ?></title>
 		<meta name="viewport" content="width=device-width" />
 		<?php	wp_head(); ?>
 		<!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -31,9 +31,9 @@
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</a>
 			<div class="social">
-				<a href="#" class="fb"></a>
-				<a href="#" class="twit"></a>
-				<a href="#" class="gplus"></a>
+				<a href="#" class="fb">Facebook</a>
+				<a href="#" class="twit">Twitter</a>
+				<a href="#" class="gplus">Google Plus</a>
 			</div>
 			<nav class="site-nav">
 				<ul class="dropdown">

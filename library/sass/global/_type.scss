@@ -17,19 +17,19 @@
 	}
 	
 	h2 {
-		font-size:1.6rem;
+		font-size:1.875rem;
 	}
 	
 	h3 {
-		font-size:1.5rem;
+		font-size:1.675rem;
 	}
 	
 	h4 {
-		font-size:1.4rem;
+		font-size:1.475rem;
 	}
 	
 	h5 {
-		font-size:1.2rem;
+		font-size:1.275rem;
 	}
 	
 	h6 {
@@ -99,9 +99,10 @@
 		p {}
 		ul {}
 		a {
+			text-decoration: underline;
+
 			&:hover, &:focus {
 				color:darken($links,5%);
-				text-decoration: underline;
 			}
 		}
 	}
