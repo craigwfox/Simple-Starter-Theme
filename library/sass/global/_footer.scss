@@ -2,7 +2,8 @@
 	Footer
 --------- */
 	.site-foot {
-		width: auto;
+		max-width: $pageWide;
+		width: 90%;
 
 		margin: 2em auto 0;
 		padding: 1em 0;
