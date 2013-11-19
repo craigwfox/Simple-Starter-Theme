@@ -1,0 +1,29 @@
+/* ---------
+	Footer
+--------- */
+	.site-foot {
+		width: auto;
+
+		margin: 2em auto 0;
+		padding: 1em 0;
+
+		border-top: 1px solid lighten($text,40%);
+
+		text-align: center;
+	}
+
+		.foot-nav {
+			ul {
+				margin: 0;
+				padding: 0 0 1em;
+			}
+			li {
+				display: inline-block;
+
+				padding: 0 1em;
+			}
+		}
+		.credits {
+			margin: 0;
+			padding: 0;
+		}
