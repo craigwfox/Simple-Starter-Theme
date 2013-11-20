@@ -33,8 +33,42 @@
 */
 
 	function inline_list_shortcode($atts, $content = null) {
-		return '<div class="inline-list ">'.do_shortcode($content).'</div>';}
+		return '<div class="inline-list">'.do_shortcode($content).'</div>';}
 	add_shortcode('inline-list', 'inline_list_shortcode');
+
+
+	function div_class_shortcode($atts, $content = null) {
+		extract(shortcode_atts( array(
+			'class' => '',
+		), $atts));
+		return '<div class="'.esc_attr($class).'">'.do_shortcode($content).'</div>';
+	}
+	add_shortcode('div_class', 'div_class_shortcode');
+
+	// Grid Shortcodes
+		function grid_row_shortcode($atts, $content = null) {
+			return '<div class="grid-row">'.do_shortcode($content).'</div>';}
+		add_shortcode('grid_row', 'grid_row_shortcode');
+		
+		function grid_col_3_4_shortcode($atts, $content = null) {
+			return '<div class="grid-3-4">'.do_shortcode($content).'</div>';}
+		add_shortcode('grid_3_4', 'grid_col_3_4_shortcode');
+		
+		function grid_col_2_3_shortcode($atts, $content = null) {
+			return '<div class="grid-2-3">'.do_shortcode($content).'</div>';}
+		add_shortcode('grid_2_3', 'grid_col_2_3_shortcode');
+		
+		function grid_col_1_2_shortcode($atts, $content = null) {
+			return '<div class="grid-1-2">'.do_shortcode($content).'</div>';}
+		add_shortcode('grid_1_2', 'grid_col_1_2_shortcode');
+		
+		function grid_col_1_3_shortcode($atts, $content = null) {
+			return '<div class="grid-1-3">'.do_shortcode($content).'</div>';}
+		add_shortcode('grid_1_3', 'grid_col_1_3_shortcode');
+		
+		function grid_col_1_4_shortcode($atts, $content = null) {
+			return '<div class="grid-1-4">'.do_shortcode($content).'</div>';}
+		add_shortcode('grid_1_4', 'grid_col_1_4_shortcode');
 
 
 
