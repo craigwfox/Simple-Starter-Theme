@@ -13,7 +13,7 @@
  |_____/ \__\__,_|_|   \__\___|_|       |_|  |_| |_|\___|_| |_| |_|\___|
                                                                         
   By Craig Fox @ craigwfox.com
-
+  https://github.com/craigwfox/Simple-Starter-Theme.git
 ******************************************************************** -->
 <!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
 <!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->

@@ -12,6 +12,7 @@
  |_____/ \__\__,_|_|   \__\___|_|       |_|  |_| |_|\___|_| |_| |_|\___|
                                                                         
   By Craig Fox @ craigwfox.com
+  https://github.com/craigwfox/Simple-Starter-Theme.git
 ************************************************************************
 
 Theme URL: https://github.com/craigwfox/Simple-Starter-Theme.git
