@@ -27,11 +27,11 @@
 	<body>
 		<header class="master-head">
 			<div class="grid-row">				
-				<a href="/" class="site-logo col-1-2">
+				<a href="/" class="site-logo grid-1-2">
 					<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</a>
-				<div class="social col-1-2">
+				<div class="social grid-1-2">
 					<a href="#" class="fb">Facebook</a>
 					<a href="#" class="twit">Twitter</a>
 					<a href="#" class="gplus">Google Plus</a>
