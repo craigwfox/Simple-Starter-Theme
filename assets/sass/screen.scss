@@ -15,19 +15,19 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
   @import "bourbon/bourbon";
   
 /* Variable and Mixins */ 
-  @import "global/variables";
-  @import "global/mixins";
+  @import "bits/variables";
+  @import "bits/mixins";
 
 /* Compass Calls and Resets */
-  @import "global/reset";
+  @import "bits/reset";
 
 /* Page Layout */
-  @import "global/header";
-  @import "global/footer";
-  @import "global/grid";
-  @import "global/page";
+  @import "layout/header";
+  @import "layout/footer";
+  @import "layout/grid";
+  @import "layout/page";
 
 /* General Styles */
-  @import "global/type";
-  @import "global/chunks";
-  @import "global/forms";
+  @import "bits/type";
+  @import "bits/chunks";
+  @import "bits/forms";

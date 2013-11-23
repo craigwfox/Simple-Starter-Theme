@@ -12,7 +12,7 @@
 					?>
 				</ul>
 			</section>
-			<p class="credits">&copy;2013 Craig Fox - <a href="http://www.craigwfox.com">craigwfox.com</a></p>
+			<p class="credits">&copy;<?php echo date('Y'); ?> <a href="https://github.com/craigwfox/Simple-Starter-Theme">Simple Starter Theme</a> by <a href="http://www.craigwfox.com">Craig Fox</a></p>
 		</footer><?php // Site Footer ?>
 		<?php wp_footer() ?>
 	</body>

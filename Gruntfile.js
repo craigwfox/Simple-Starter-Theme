@@ -1,18 +1,9 @@
 module.exports = function(grunt) {
 	// Do grunt-related things in here
 
-	// Load SASS
 	grunt.initConfig({
-		sass: {                              // Task
-			dist: {                            // Target
-				options: {                       // Target options
-					style: 'compressed'
-				},
-				files: {                         // Dictionary of files
-					'library/css/screen.css': 'library/sass/screen.scss',       // 'destination': 'source'
-				}
-			}
-		},
+
+	// Watch
 		watch: {
 			css: {
 				files: '**/*.scss',
@@ -20,9 +11,41 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true,
 				},
+			},
+
+			scripts: {
+				files: ['assets/jsbin/*.js'],
+				tasks: ['uglify'],
+				options: {
+					spawn: false,
+				},
+			},
+
+		},
+
+		// CSS
+		sass: {
+			dist: {
+				options: {
+					style: 'compressed'
+				},
+				files: {
+					'assets/css/screen.css': 'assets/sass/screen.scss',
+				}
+			},
+		},
+
+				// JS
+		uglify: {
+			my_target: {
+				files: {
+					'assets/js/site.min.js': ['assets/jsbin/site.js']
+				}
 			}
 		}
 	});
+
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.registerTask('default',['watch']);
