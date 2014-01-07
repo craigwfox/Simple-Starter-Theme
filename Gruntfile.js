@@ -42,7 +42,7 @@ module.exports = function(grunt) {
           'assets/js/site.min.js': ['assets/jsbin/site.js']
         }
       }
-    }
+    },
 
   // Images
     imageoptim: {
