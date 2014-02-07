@@ -10,9 +10,9 @@
 		}
 
 	/* ---- Sprite for Global Sprite ---- */
-		@mixin sprite-global($W, $h, $x, $y) {
-			width:$x;
-			height:$y;
+		@mixin sprite-global($w, $h, $x, $y) {
+			width:$w;
+			height:$h;
 
 			background: url('../../library/imgs/main-sprite.png') no-repeat $x $y;
 		}
