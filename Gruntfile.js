@@ -47,7 +47,7 @@ module.exports = function(grunt) {
   // Images
     imageoptim: {
       imageOp: {
-        src: ['assets/imgs']
+        src: ['assets/images']
       }
     },
 
