@@ -22,10 +22,12 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
   @import "bits/reset";
 
 /* Page Layout */
+  @import "layout/grid";
   @import "layout/header";
   @import "layout/footer";
-  @import "layout/grid";
+  @import "layout/sidebar";
   @import "layout/page";
+  @import "layout/home";
 
 /* General Styles */
   @import "bits/type";

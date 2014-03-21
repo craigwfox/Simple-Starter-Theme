@@ -1,58 +1,58 @@
 /* ---------
-	Page
+  Page
 --------- */
-	.main {
-		max-width: $pageWide;
-		width: 90%;
+  .main {
+    max-width: $pageWide;
+    width: 90%;
 
-		margin: 0 auto;
-	}
-		.content {
+    margin: 0 auto;
+  }
+    .content {
 
-			@media screen and (max-width: 700px) {
-				width: 100%;
-				display: block;
-			}
-		}
-	
-		/* --- Posts --- */
-			.post {
-				padding: 1em 0;
+      @media screen and (max-width: 700px) {
+        width: 100%;
+        display: block;
+      }
+    }
+  
+    /* --- Posts --- */
+      .post {
+        padding: 1em 0;
 
-				border-bottom: 1px solid lighten($text,40%);
-			}
-				.post-info {
-					padding: 0;
+        border-bottom: 1px solid lighten($text,40%);
+      }
+        .post-info {
+          padding: 0;
 
-					list-style-type: none;
+          list-style-type: none;
 
-					li {
-						display: inline;
+          li {
+            display: inline;
 
-						padding: 0 .5em 0 0;
-					}
-				}
-				.post-date {
-					font-weight: 600;
-				}
-				.post-cat {
-					font-style: italic;
-				}
-				.post-title {
-					padding: 0;
-				}
+            padding: 0 .5em 0 0;
+          }
+        }
+        .post-date {
+          font-weight: 600;
+        }
+        .post-cat {
+          font-style: italic;
+        }
+        .post-title {
+          padding: 0;
+        }
 
-			/* - Post Nav - */
-				.navigation {
-					padding: 1.25em 0 0;
+      /* - Post Nav - */
+        .navigation {
+          padding: 1.25em 0 0;
 
-					list-style-type: none;
+          list-style-type: none;
 
-					li {
-						display: inline;
+          li {
+            display: inline;
 
-						padding: 0 1.5em 0 0;
-					}
-				}
-					.previous-entries {}
-					.next-entries {}
+            padding: 0 1.5em 0 0;
+          }
+        }
+          .previous-entries {}
+          .next-entries {}
