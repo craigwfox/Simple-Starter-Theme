@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   // Watch
     watch: {
       css: {
-        files: 'assets/sass/**/*.scss',
+        files: 'assets-build/sass/**/*.scss',
         tasks: ['sass'],
         options: {
           livereload: true,
@@ -14,7 +14,7 @@ module.exports = function(grunt) {
       },
 
       scripts: {
-        files: ['assets/jsbin/*.js'],
+        files: ['assets-build/js/*.js'],
         tasks: ['uglify'],
         options: {
           spawn: false,
