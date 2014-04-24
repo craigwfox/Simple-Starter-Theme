@@ -24,7 +24,7 @@
         <p>Sorry, but you are looking for something that isn't here.</p>
       <?php endif; ?>
 
-      </section>
+      </section><!-- Content -->
       <?php get_sidebar(); ?>
-    </div>
+    </div><!-- Main -->
 <?php get_footer(); ?>

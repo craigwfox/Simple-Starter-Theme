@@ -30,7 +30,7 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          'assets/css/screen.css': 'assets/sass/screen.scss',
+          'assets/css/screen.css': 'assets-build/sass/screen.scss',
         }
       },
     },
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'assets/js/site.min.js': ['assets/jsbin/site.js']
+          'assets/js/site.min.js': ['assets-build/js/site.js']
         }
       }
     },

@@ -20,7 +20,7 @@
         <h2>Not Found</h2>
         <p>Sorry, but you are looking for something that isn't here.</p>
       <?php endif; ?>
-      </section><?php // Content ?>
+      </section><!-- Content -->
       <?php get_sidebar(); ?>
-    </div><?php // Main ?>
+    </div><!-- Main -->
 <?php get_footer(); ?>

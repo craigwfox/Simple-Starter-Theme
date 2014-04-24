@@ -14,7 +14,7 @@ Template Name: Archives
           <?php endwhile;?>
         </ul>
 
-      </section>
+      </section><!-- Content -->
       <?php get_sidebar(); ?>
-    </div>
+    </div><!-- Main -->
 <?php get_footer(); ?>

@@ -8,4 +8,6 @@ Author: Craig Fox
 **************************************************************************************************
 ----------------------------------------------------------------------------------------------- */
 
-/*	Go to library/css/sass/ for theme styles */
+/*	Go to assets-build/sass/ for full theme styles */
+
+@import assets/css/screen.css;
