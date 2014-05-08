@@ -45,24 +45,26 @@
         position:relative;
         margin:0 -4px 0 0;
 
-        font: normal 400 1.275em/1em $text-font;
+        font: normal normal 400 1.275em/1em $text-font;
+      }
+      a {
+        display:block;
 
-        > a {
-          display:block;
+        position:relative;
+        z-index:60;
+        padding: 0 .675em;
 
-          position:relative;
-          z-index:20;
-          padding: 0 .675em;
+        &:hover {}
+      }
 
-          &:hover {}
-        }
-
+      > li {
         &:first-child {
           a {
             padding-left: 0;
           }
         }
       }
+
       /* -- Second Level -- */
       ul {
         width: 250px;
@@ -70,11 +72,12 @@
         position: absolute;
         top: 100%;
         left: -2px;
-        z-index:100;
-        padding: 0;
-        margin: 0;
+        z-index:50;
+        padding: .375em 0;
 
         visibility: hidden;
+
+        background: rgba(230,230,230,.95);
 
         li {        
           position:relative;
@@ -83,15 +86,18 @@
           margin:0;
 
           display:block;
-          a {
-            position:relative;
-            z-index:115;
-            display:block;
 
-            &:hover {
+          font-size: .975rem;
+        }
 
-            }
-          }
+        a {
+          position:relative;
+          z-index:115;
+          display:block;
+
+          padding: .225em .5em;
+
+          &:hover {}
         }
       }
     }

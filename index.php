@@ -13,8 +13,8 @@
         </article>
         <?php endwhile; ?>
         <ul class="navigation"> 
-          <li class="previous-entries"><?php next_posts_link('Older Entries') ?>Older Entries</li>
-          <li class="next-entries"><?php previous_posts_link('Newer Entries') ?>Newer Entries</li> 
+          <li class="previous-entries"><?php next_posts_link('Older Entries') ?></li>
+          <li class="next-entries"><?php previous_posts_link('Newer Entries') ?></li> 
         </ul>
       <?php else : ?>
         <h2>Not Found</h2>

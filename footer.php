@@ -2,7 +2,7 @@
       <section class="foot-nav">
         <ul>
           <?php $menuParameters = array(
-            'theme_location' => 'main_nav',
+            'theme_location' => 'footer_nav',
             'container'       => false,
             'echo'            => true,
             'items_wrap'      => '%3$s',
@@ -15,6 +15,6 @@
       <p class="credits">&copy;<?php echo date('Y'); ?> <a href="https://github.com/craigwfox/Simple-Starter-Theme">Simple Starter Theme</a> by <a href="http://www.craigwfox.com">Craig Fox</a></p>
     </footer><!-- Site Footer -->
     <?php wp_footer() ?>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/site.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.min.js"></script>
   </body>
 </html>

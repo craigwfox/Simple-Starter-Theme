@@ -14,7 +14,6 @@
   h1 {
     padding: 0 0 .25em;
     
-    color: desaturate(blue, 60%);
     font-size:2rem;
   }
   
@@ -42,7 +41,7 @@
     margin: 0;
     padding:0 0 .675em;
 
-    font:normal normal 400 .9rem/1.7em $text-font;
+    font:normal normal 400 .975rem/1.725em $text-font;
     color:$text;
   }
 
@@ -109,6 +108,7 @@
       font-size: 1.575em;
     } 
   }
+  
   code {
     display: block;
 

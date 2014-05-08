@@ -46,10 +46,14 @@
         margin:0 1.175em .875em 1.175em;
         padding:0;
       }
+      
+      img.aligncenter {
+        display: block;
 
-      img.alignleft, img.alignright, img.aligncenter {
-        border: .1em solid #999;
+        margin: 0 auto;
       }
+
+      img.alignleft, img.alignright, img.aligncenter {}
 
       .inline-list {
 
