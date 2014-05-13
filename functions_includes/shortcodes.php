@@ -38,7 +38,7 @@
   ----------------- */
     function inline_list_shortcode($atts, $content = null) {
       return '<div class="inline-list">'.do_shortcode($content).'</div>';}
-    add_shortcode('inline-list', 'inline_list_shortcode');
+    add_shortcode('inline_list', 'inline_list_shortcode');
 
 
     function div_class_shortcode($atts, $content = null) {
@@ -76,6 +76,12 @@
       return '<div class="grid-1-4">'.do_shortcode($content).'</div>';}
     add_shortcode('grid_1_4', 'grid_col_1_4_shortcode');
 
+  /* -----------------
+    Misc Shortcodes
+  ----------------- */
+    function iframe_wrap_shortcode($atts, $content = null) {
+      return '<div class="iframe-wrap">'.do_shortcode($content).'</div>';}
+    add_shortcode('iframe_wrap', 'iframe_wrap_shortcode');
 
 
   remove_filter('the_content', 'wpautop');

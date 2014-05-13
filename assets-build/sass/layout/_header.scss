@@ -12,15 +12,24 @@
 
     border-bottom: 1px solid lighten($text,40%);
   }
-    .site-title {
-      padding: 0;
-    }
-    .site-description {
-      padding: 0;
+    .site-logo {
+      height: auto;
+      padding-top: .125em;
+      padding-bottom: .125em;
 
-      font-size: 1.275rem;
-      font-weight: 300;
+      img {
+        // max-width: 100%;
+      }
     }
+      .site-title {
+        padding: 0;
+      }
+      .site-description {
+        padding: 0;
+
+        font-size: 1.275rem;
+        font-weight: 300;
+      }
 
 
   /* ------------------------------

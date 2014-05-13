@@ -5,18 +5,23 @@
 ------------------------------------------------------------------------ */
   .grid-wrap {}
     .grid-row {
-        overflow: auto;
-
-        margin-bottom: 3%;
+      margin-bottom: 1em;
     }
       .grid-col {
+        height: auto;
+
         display: inline-block;
         vertical-align: top;
         overflow: auto;
 
-        padding:0 1.5%;
+        padding:0 1em;
 
-        @include box-sizing(border-box);
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
       }
 
         .grid-3-4 {

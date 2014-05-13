@@ -27,11 +27,21 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
   </head>
   <body>
     <header class="site-header">
-      <div class="grid-row">        
-        <a href="<?php echo get_site_url(); ?>" class="site-logo grid-1-2">
-          <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-          <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-        </a>
+      <div class="grid-row">
+        <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
+        <div class="site-logo grid-1-2">
+          <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'>
+            <img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+          </a>
+        </div>
+        <?php else : ?>
+        <div class="site-logo grid-1-2">
+          <a href="<?php echo get_site_url(); ?>">
+            <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+            <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+          </a>
+        </div>
+        <?php endif; ?>
         <div class="social grid-1-2">
           <a href="#0" class="fb">Facebook</a>
           <a href="#0" class="twit">Twitter</a>

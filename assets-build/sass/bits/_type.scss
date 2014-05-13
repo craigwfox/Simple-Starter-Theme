@@ -9,6 +9,20 @@
 
     color:$headline;
     font:normal normal 700 2em/1.2em $head-font;
+
+    a {
+      color: $links;
+
+      text-decoration: none;
+
+      &:hover, &:focus {
+        color:darken($links,20%);
+      }
+    }
+  }
+
+  .page-title {
+    color: $links;
   }
   
   h1 {
@@ -108,7 +122,7 @@
       font-size: 1.575em;
     } 
   }
-  
+
   code {
     display: block;
 
@@ -133,20 +147,13 @@
     Subpage Styles
   ------------------------------ */
   .content {
-    h1, h2, h3, h4, h5, h6 {
+    p,span,li {
       a {
-        color: $links;
+        text-decoration: underline;
 
-        text-decoration: none;
-      }
-    }
-    p {}
-    ul {}
-    a {
-      text-decoration: underline;
-
-      &:hover, &:focus {
-        color:darken($links,5%);
+        &:hover, &:focus {
+          color:darken($links,5%);
+        }
       }
     }
   }

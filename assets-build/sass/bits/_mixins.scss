@@ -4,13 +4,6 @@
 ===========================================================================
 ------------------------------------------------------------------------ */
 
-  /* ---- Inline-Block with Haslayout Hack ---- */
-    @mixin inline-block {
-      display:inline-block;
-      zoom:1;
-      *display:inline;
-    }
-
   /* ---- Sprite for Global Sprite ---- */
     @mixin sprite-global($w, $h, $x, $y) {
       width:$w;
@@ -20,7 +13,7 @@
     }
   
   /* ---- Sprite with Variable Img ---- */
-    @mixin sprite-vari($W, $h, $x, $y, $url) {
+    @mixin sprite-vari($w, $h, $x, $y, $url) {
       width:$x;
       height:$y;
 

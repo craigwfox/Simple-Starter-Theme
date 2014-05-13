@@ -6,7 +6,12 @@
  /* --- My Tweaks --- */
     * {
       background-repeat:no-repeat;
-      @include box-sizing(border-box);
+      box-sizing:border-box;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
     }
 
     body {
