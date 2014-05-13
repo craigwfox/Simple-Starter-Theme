@@ -6,9 +6,8 @@
 ********************************************************************* */
 
 /* ---------------------------------------------------------------------
-  Shortcode to Remove AutoP
-  To use wrap your content with
-  [raw]... Content ...[/raw]
+  Shortcode to Remove AutoP - From css-tricks.com
+  To use wrap your content with [raw][/raw]
 --------------------------------------------------------------------- */
   function my_formatter($content) {
     $new_content = '';
@@ -43,9 +42,9 @@
 
     function div_class_shortcode($atts, $content = null) {
       extract(shortcode_atts( array(
-        'class' => '',
+        'class_name' => '',
       ), $atts));
-      return '<div class="'.esc_attr($class).'">'.do_shortcode($content).'</div>';
+      return '<div class="'.esc_attr($class_name).'">'.do_shortcode($content).'</div>';
     }
     add_shortcode('div_class', 'div_class_shortcode');
 
@@ -53,34 +52,55 @@
     Grid Shortcodes
   ----------------- */
     function grid_row_shortcode($atts, $content = null) {
-      return '<div class="grid-row">'.do_shortcode($content).'</div>';}
+      extract(shortcode_atts( array(
+        'class_name' => '',
+      ), $atts));
+      return '<div class="grid-row '.esc_attr($class_name).'">'.do_shortcode($content).'</div>';}
     add_shortcode('grid_row', 'grid_row_shortcode');
     
     function grid_col_3_4_shortcode($atts, $content = null) {
-      return '<div class="grid-3-4">'.do_shortcode($content).'</div>';}
+      extract(shortcode_atts( array(
+        'class_name' => '',
+      ), $atts));
+      return '<div class="grid-3-4 '.esc_attr($class_name).'">'.do_shortcode($content).'</div>';}
     add_shortcode('grid_3_4', 'grid_col_3_4_shortcode');
     
     function grid_col_2_3_shortcode($atts, $content = null) {
-      return '<div class="grid-2-3">'.do_shortcode($content).'</div>';}
+      extract(shortcode_atts( array(
+        'class_name' => '',
+      ), $atts));
+      return '<div class="grid-2-3 '.esc_attr($class_name).'">'.do_shortcode($content).'</div>';}
     add_shortcode('grid_2_3', 'grid_col_2_3_shortcode');
     
     function grid_col_1_2_shortcode($atts, $content = null) {
-      return '<div class="grid-1-2">'.do_shortcode($content).'</div>';}
+      extract(shortcode_atts( array(
+        'class_name' => '',
+      ), $atts));
+      return '<div class="grid-1-2 '.esc_attr($class_name).'">'.do_shortcode($content).'</div>';}
     add_shortcode('grid_1_2', 'grid_col_1_2_shortcode');
     
     function grid_col_1_3_shortcode($atts, $content = null) {
-      return '<div class="grid-1-3">'.do_shortcode($content).'</div>';}
+      extract(shortcode_atts( array(
+        'class_name' => '',
+      ), $atts));
+      return '<div class="grid-1-3 '.esc_attr($class_name).'">'.do_shortcode($content).'</div>';}
     add_shortcode('grid_1_3', 'grid_col_1_3_shortcode');
     
     function grid_col_1_4_shortcode($atts, $content = null) {
-      return '<div class="grid-1-4">'.do_shortcode($content).'</div>';}
+      extract(shortcode_atts( array(
+        'class_name' => '',
+      ), $atts));
+      return '<div class="grid-1-4 '.esc_attr($class_name).'">'.do_shortcode($content).'</div>';}
     add_shortcode('grid_1_4', 'grid_col_1_4_shortcode');
 
   /* -----------------
     Misc Shortcodes
   ----------------- */
     function iframe_wrap_shortcode($atts, $content = null) {
-      return '<div class="iframe-wrap">'.do_shortcode($content).'</div>';}
+      extract(shortcode_atts( array(
+        'class_name' => '',
+      ), $atts));
+      return '<div class="iframe-wrap '.esc_attr($class_name).'">'.do_shortcode($content).'</div>';}
     add_shortcode('iframe_wrap', 'iframe_wrap_shortcode');
 
 
