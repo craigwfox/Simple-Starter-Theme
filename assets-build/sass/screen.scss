@@ -11,8 +11,6 @@
 By Craig Fox @ craigwfox.com
 https://github.com/craigwfox/Simple-Starter-Theme.git
 ********************************************************************* */
-/* Call Bourbon */
-  @import "bourbon/bourbon";
   
 /* Variable and Mixins */ 
   @import "bits/variables";
@@ -23,6 +21,7 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
 
 /* Page Layout */
   @import "layout/grid";
+  
   @import "layout/header";
   @import "layout/footer";
   @import "layout/sidebar";
