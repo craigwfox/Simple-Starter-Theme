@@ -61,27 +61,56 @@ Images(for the theme's design), scss, css, js, and fonts can be found in the ass
     <td>Wraps with a div with an option to add a class_name.</td>
   </tr>
   <tr>
+    <td colspan="2">
+      <code>
+        [div_class class_name="some_class_name"]
+          Some content you don't want autop to affect.
+        [/div_class]
+      </code>
+    </td>
+  </tr>
+  <tr>
     <th>[raw]</th>
     <td>Wrap a chunk of text/code to prevent wordpress's autop.</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <code>
+        [raw]
+          <h2>Headline</h2>
+          <p>Some content you don't want autop to affect.</p>
+        [/raw]
+      </code>
+    </td>
   </tr>
   <tr>
     <th>[inline_list]</th>
     <td>Use to wrap lists in a div with a class of inline-list. To make inline lists.</td>
   </tr>
   <tr>
+    <td colspan="2">
+      <code>
+        [inline_list]
+          <ul style="list-style-type:none;">
+            <li style="display:inline;">List Item</li>
+            <li style="display:inline;">List Item 2</li>
+            <li style="display:inline;">List Item 3</li>
+          </ul>
+        [/inline_list]
+      </code>
+    </td>
+  </tr>
+  <tr>
     <th>[iframe_wrap]</th>
     <td>Wraps iframes with a div to make them responsice.</td>
   </tr>
+  <tr>
+    <td colspan="2">
+      <code>
+        [iframe_wrap]
+          <iframe src="" frameborder="0"></iframe>
+        [/iframe_wrap]
+      </code>
+    </td>
+  </tr>
 </table>
-
-```
-[div_class class_name="some_class_name"]
-  Some content you don't want autop to affect.
-[/div_class]
-```
-
-```
-[raw]
-  Some content you don't want autop to affect.
-[/raw]
-```
