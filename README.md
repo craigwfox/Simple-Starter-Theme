@@ -54,63 +54,52 @@ Images(for the theme's design), scss, css, js, and fonts can be found in the ass
 [/grid_row]
 ```
 
-**Misc Shortcodes**
-<table>
+**Misc Shortcodes**<br />
+*Div with a class*
+<table width="100%">
   <tr>
-    <th>[div_class class_name=""]</th>
-    <td>Wraps with a div with an option to add a class_name.</td>
+    <th colspan="1">[div_class class_name=""]</th>
+    <td colspan="1">Wraps with a div with an option to add a class_name.</td>
   </tr>
-  <tr>
-    <td colspan="2">
-      <code>
+</table>
         [div_class class_name="some_class_name"]
           Some content you don't want autop to affect.
         [/div_class]
-      </code>
-    </td>
-  </tr>
+
+*Raw remove Wordpress autop*
+<table width="100%">
   <tr>
-    <th>[raw]</th>
-    <td>Wrap a chunk of text/code to prevent wordpress's autop.</td>
+    <th colspan="1">[raw]</th>
+    <td colspan="1">Wrap a chunk of text/code to prevent wordpress's autop.</td>
   </tr>
-  <tr>
-    <td colspan="2">
-      <code>
+</table>
         [raw]
           <h2>Headline</h2>
           <p>Some content you don't want autop to affect.</p>
         [/raw]
-      </code>
-    </td>
-  </tr>
+
+*Make Inline Lists*
+<table width="100%">
   <tr>
-    <th>[inline_list]</th>
-    <td>Use to wrap lists in a div with a class of inline-list. To make inline lists.</td>
+    <th colspan="1">[inline_list]</th>
+    <td colspan="1">Use to wrap lists in a div with a class of inline-list. To make inline lists.</td>
   </tr>
-  <tr>
-    <td colspan="2">
-      <code>
+</table>
         [inline_list]
-          <ul style="list-style-type:none;">
-            <li style="display:inline;">List Item</li>
-            <li style="display:inline;">List Item 2</li>
-            <li style="display:inline;">List Item 3</li>
-          </ul>
+        <ul>
+          <li>List Item</li>
+          <li>List Item 2</li>
+          <li>List Item 3</li>
+        </ul>
         [/inline_list]
-      </code>
-    </td>
-  </tr>
+
+*Responsive iframe Wrapper*
+<table width="100%">
   <tr>
-    <th>[iframe_wrap]</th>
-    <td>Wraps iframes with a div to make them responsice.</td>
+    <th colspan="1">[iframe_wrap]</th>
+    <td colspan="1">Wraps iframes with a div to make them responsice.</td>
   </tr>
-  <tr>
-    <td colspan="2">
-      <code>
+</table>
         [iframe_wrap]
           <iframe src="" frameborder="0"></iframe>
         [/iframe_wrap]
-      </code>
-    </td>
-  </tr>
-</table>
