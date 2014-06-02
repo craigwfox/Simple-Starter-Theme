@@ -36,7 +36,10 @@
     Basic Shortcodes
   ----------------- */
     function inline_list_shortcode($atts, $content = null) {
-      return '<div class="inline-list">'.do_shortcode($content).'</div>';}
+      extract(shortcode_atts( array(
+        'class_name' => '',
+      ), $atts));
+      return '<div class="inline-list '.esc_attr($class_name).'">'.do_shortcode($content).'</div>';}
     add_shortcode('inline_list', 'inline_list_shortcode');
 
 
