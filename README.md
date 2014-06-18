@@ -18,7 +18,7 @@ Images(for the theme's design), scss, css, js, and fonts can be found in the ass
 **Grid Shortcodes**
 <table>
   <tr>
-    <th>[grid_row][/grid</th>
+    <th>[grid_row]</th>
     <td>Use to wrap all grid items.</td>
   </tr>
   <tr>
