@@ -29,7 +29,18 @@ Template Name: Home Page
             <p>Sorry, but you are looking for something that isn't here.</p>
           <?php endif; ?>
         </section>
-        <aside class="home-sidebar grid-1-3"></aside>
+        <aside class="home-sidebar grid-1-3">
+          <?php
+            $mainSliderArgs = array(
+              'post-type' => 'sspt_callouts',
+              'sspt_tax_callouts' => ,
+              'showposts' => 4,
+            );
+            $mainSliderQuery = new WP_Query($mainSliderArgs);
+            while ($mainSliderQuery->have_posts()) : $mainSliderQuery->the_post(); {
+          ?>
+          <?php } endwhile; wp_reset_postdata(); ?>
+        </aside>
       </div><!-- Home Content -->
 
     </div><!-- Main -->
