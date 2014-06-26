@@ -19,6 +19,11 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
 /* Compass Calls and Resets */
   @import "bits/reset";
 
+/* General Styles */
+  @import "bits/type";
+  @import "bits/chunks";
+  @import "bits/forms";
+
 /* Page Layout */
   @import "layout/grid";
   
@@ -29,11 +34,6 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
   @import "layout/home";
 
   @import "layout/media_queries";
-
-/* General Styles */
-  @import "bits/type";
-  @import "bits/chunks";
-  @import "bits/forms";
 
 /* Misc */
   @import "bits/plugins";
