@@ -43,9 +43,9 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
         </div>
         <?php endif; ?>
         <div class="social grid-1-2">
-          <a href="#0" class="fb">Facebook</a>
-          <a href="#0" class="twit">Twitter</a>
-          <a href="#0" class="gplus">Google Plus</a>
+          <a href="#0" class="fb-icn">Facebook</a>
+          <a href="#0" class="twit-icn">Twitter</a>
+          <a href="#0" class="gplus-icn">Google Plus</a>
         </div>
       </div>
       <nav class="site-nav">
