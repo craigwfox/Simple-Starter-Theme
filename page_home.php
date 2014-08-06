@@ -5,7 +5,7 @@ Template Name: Home Page
 ?>
 <?php get_header(); ?>
     <div class="main cf">
-      <div class="slider main-slider">
+      <div id="mainSlider" class="slider main-slider">
         <?php
           $mainSliderArgs = array(
             'post-type' => 'sspt_banners',
