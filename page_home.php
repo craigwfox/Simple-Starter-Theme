@@ -9,7 +9,7 @@ Template Name: Home Page
         <?php
           $mainSliderArgs = array(
             'post-type' => 'sspt_banners',
-            'sspt_tax_banners' => ,
+            'sspt_tax_banners' => 'main-slider',
             'showposts' => 10,
           );
           $mainSliderQuery = new WP_Query($mainSliderArgs);
@@ -33,7 +33,7 @@ Template Name: Home Page
           <?php
             $mainSliderArgs = array(
               'post-type' => 'sspt_callouts',
-              'sspt_tax_callouts' => ,
+              'sspt_tax_callouts' => 'main-callouts',
               'showposts' => 4,
             );
             $mainSliderQuery = new WP_Query($mainSliderArgs);

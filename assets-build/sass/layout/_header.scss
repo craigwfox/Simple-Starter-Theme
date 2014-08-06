@@ -38,74 +38,73 @@
       padding: 1.375em 0 0;
     }
 
-
-    .dropdown {
-      width:auto;
-
-      position:relative;
-      padding:0;
-
-      list-style:none;
-
-      li {
-        display: inline-block;
-        
-        position:relative;
-        margin:0 -4px 0 0;
-
-        font: normal normal 400 1.275em/1em $text-font;
-      }
-      a {
-        display:block;
+      .dropdown {
+        width:auto;
 
         position:relative;
-        z-index:60;
-        padding: 0 .675em;
+        padding:0;
 
-        &:hover {}
-      }
+        list-style:none;
 
-      > li {
-        &:first-child {
-          a {
-            padding-left: 0;
-          }
-        }
-      }
-
-      /* -- Second Level -- */
-      ul {
-        width: 250px;
-
-        position: absolute;
-        top: 100%;
-        left: -2px;
-        z-index:50;
-        padding: .375em 0;
-
-        visibility: hidden;
-
-        background: rgba(230,230,230,.95);
-
-        li {        
+        li {
+          display: inline-block;
+          
           position:relative;
-          z-index:110;
-          padding:0;
-          margin:0;
+          margin:0 -4px 0 0;
 
-          display:block;
-
-          font-size: .975rem;
+          font: normal normal 400 1.275em/1em $text-font;
         }
-
         a {
-          position:relative;
-          z-index:115;
           display:block;
 
-          padding: .225em .5em;
+          position:relative;
+          z-index:60;
+          padding: 0 .675em;
 
           &:hover {}
         }
+
+        > li {
+          &:first-child {
+            a {
+              padding-left: 0;
+            }
+          }
+        }
+
+        /* -- Second Level -- */
+        ul {
+          width: 250px;
+
+          position: absolute;
+          top: 100%;
+          left: -2px;
+          z-index:50;
+          padding: .375em 0;
+
+          visibility: hidden;
+
+          background: rgba(230,230,230,.95);
+
+          li {        
+            position:relative;
+            z-index:110;
+            padding:0;
+            margin:0;
+
+            display:block;
+
+            font-size: .975rem;
+          }
+
+          a {
+            position:relative;
+            z-index:115;
+            display:block;
+
+            padding: .225em .5em;
+
+            &:hover {}
+          }
+        }
       }
-    }
