@@ -11,13 +11,13 @@
 By Craig Fox @ craigwfox.com
 https://github.com/craigwfox/Simple-Starter-Theme.git
 ******************************************************************** -->
-<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
-<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
-<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if lt IE 7]><html class="no-js ie6 oldie" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" <?php language_attributes(); ?>><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
   <head>
     <meta charset="utf-8" />
-    <title><?php bloginfo('name') ?> | <?php wp_title(); ?></title>
+    <title><?php wp_title(); ?></title>
     <meta name="viewport" content="width=device-width" />
     <?php wp_head(); ?>
     <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -25,7 +25,7 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Oswald:400,300,700' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" />
   </head>
-  <body>
+  <body <?php body_class( $class ); ?>>
     <header class="site-header">
       <div class="grid-row">
         <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>

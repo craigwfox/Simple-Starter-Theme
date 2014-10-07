@@ -24,6 +24,27 @@
 
 
 /* -------------------------------------
+  Pretty Home Page Title Tag
+------------------------------------- */
+  add_filter( 'wp_title', 'baw_hack_wp_title_for_home' );
+  function baw_hack_wp_title_for_home( $title )
+  {
+    if( empty( $title ) && ( is_home() || is_front_page() ) ) {
+      return __( 'Home', 'theme_domain' ) . ' | ' . get_bloginfo( 'description' );
+    }
+    return $title;
+  }
+
+
+/* -------------------------------------
+  Set up the content width value based on the theme's design.
+------------------------------------- */
+if ( ! isset( $content_width ) ) {
+  $content_width = 600;
+}
+
+
+/* -------------------------------------
   Theme Customizer
 ------------------------------------- */
   function themeslug_theme_customizer( $wp_customize ) {
@@ -43,12 +64,85 @@
   add_action('customize_register', 'themeslug_theme_customizer');
 
 
-/* -------------------------------------
-  Pull in includes for other functions
-------------------------------------- */
-  include ('functions_includes/menus.php');
-  include ('functions_includes/images.php');
-  include ('functions_includes/widget_areas.php');
-  include ('functions_includes/shortcodes.php');
+
+/* *********************************************************************
+------------------------------------------------------------------------
+  Images Functions
+------------------------------------------------------------------------
+********************************************************************* */
+  /* -----------------------
+    Enable Post Thumbnails
+  ----------------------- */
+    if ( function_exists( 'add_theme_support' ) ) { 
+      add_theme_support( 'post-thumbnails' ); 
+    }
+
+  /* -----------------------
+    Enable SVG Images
+  ----------------------- */
+    function cc_mime_types( $mimes ){
+      $mimes['svg'] = 'image/svg+xml';
+      return $mimes;
+    }
+    add_filter( 'upload_mimes', 'cc_mime_types' );
+
+
+
+/* *********************************************************************
+------------------------------------------------------------------------
+  Menus Functions
+------------------------------------------------------------------------
+********************************************************************* */
+
+  add_theme_support( 'menus' );
+
+  /* --- Creating the Nav Menus --- */
+    if ( function_exists( 'register_nav_menus' ) ) {
+      register_nav_menus(
+        array(
+          'main_nav' => 'Main Nav',
+          'footer_nav' => 'Foot Nav'
+        )
+      );
+    }
+
+  /* --- Clean Up menus --- */
+    add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
+    add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
+    add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
+    function my_css_attributes_filter($var) {
+      return is_array($var) ? array() : '';
+    }
+    // remove ul wp_nav_menu
+    function remove_ul ( $menu ){
+        return preg_replace( array( '#^<ul[^>]*>#', '#</ul>$#' ), '', $menu );
+    }
+    add_filter( 'wp_nav_menu', 'remove_ul' );
+    add_filter('wp_nav_menu_args', 'prefix_nav_menu_args');
+    function prefix_nav_menu_args($args = ''){
+        $args['container'] = false;
+        return $args;
+    }
+
+
+
+/* *********************************************************************
+------------------------------------------------------------------------
+  Widgets Functions
+------------------------------------------------------------------------
+********************************************************************* */
+
+  add_filter('widget_text', 'do_shortcode');
+  if (function_exists('register_sidebar')) {
+    register_sidebar(array(
+      'name' => 'Site Sidebar',
+      'id'   => 'site_sidebar',
+      'description'   => 'This is the main sidebar.',
+      'before_widget' => '<article id="%1$s" class="sidebar-widget widget %2$s">',
+      'after_widget'  => '</article>',
+      'before_title'  => '<h4 class="widget-title">',
+      'after_title'   => '</h4>'
+    ));
+  }
 
 ?>
