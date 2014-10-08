@@ -1,7 +1,9 @@
 <div class="search-form">
-	<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
-		<label class="hidden" for="s"><?php _e('Search:'); ?></label>
-		<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
-		<input type="submit" id="searchsubmit" value="GO" />
-	</form>
+  <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+    <div class="search-form-inner">
+      <label class="screen-reader-text" for="s"><?php _x( 'Search for:', 'label' ); ?></label>
+      <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" />
+      <input type="submit" id="searchsubmit" value="<?php echo esc_attr_x( 'Search', 'submit button' ); ?>" />
+    </div>
+  </form>
 </div>
