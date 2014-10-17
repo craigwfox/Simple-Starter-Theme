@@ -8,16 +8,20 @@
         <article class="post">
           <?php the_content('Read the rest of this entry &raquo;'); ?>
         </article>
+
+        <div class="comments">
+          <?php
+            if ( comments_open() || get_comments_number() ) {
+              comments_template();
+            }
+          ?>
+        </div>
         <?php endwhile; ?>
         
         <ul class="navigation"> 
           <li class="previous-entries"><?php previous_post_link(' %link') ?></li>
           <li class="next-entries"><?php next_post_link('%link') ?></li> 
         </ul>
-
-        <div class="comments">
-          
-        </div>
         <?php else : ?>
           <h2>Not Found</h2>
           <p>Sorry, but you are looking for something that isn't here.</p>
