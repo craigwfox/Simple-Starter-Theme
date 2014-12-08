@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
     $(function(){
       mainSlider.slidesjs({
         width: 770,
-        height: 4000,
+        height: 400,
         play: {
           auto: true,
           effect:'fade',
