@@ -5,7 +5,7 @@ Template Name: Home Page
 ?>
 <?php get_header(); ?>
     <div class="main cf">
-      <div id="mainSlider" class="slider main-slider">
+      <div id="main-slider" class="slider">
         <?php
           $mainSliderArgs = array(
             'post-type' => 'sspt_banners',
@@ -15,6 +15,9 @@ Template Name: Home Page
           $mainSliderQuery = new WP_Query($mainSliderArgs);
           while ($mainSliderQuery->have_posts()) : $mainSliderQuery->the_post(); {
         ?>
+        <div class="item">
+          <?php the_post_thumbnail('main-slider-img'); ?>
+        </div>
         <?php } endwhile; wp_reset_postdata(); ?>
       </div><!-- Main Slider -->
 
