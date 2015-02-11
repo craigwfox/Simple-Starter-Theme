@@ -63,6 +63,19 @@ module.exports = function(grunt) {
       }
     },
 
+  // browserSync
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : 'assets/css/screen.min.css'
+        },
+        options: {
+          proxy: "local.dev",
+          watchTask: true
+        }
+      }
+    }
+
   });
 
 
@@ -70,7 +83,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default',['watch']);
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-browser-sync');
+
+
+  grunt.registerTask('default',['browserSync','watch']);
 };
