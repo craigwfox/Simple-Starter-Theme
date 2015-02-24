@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   // Watch
     watch: {
       css: {
-        files: 'assets-build/sass/**/*.scss',
+        files: 'src/sass/**/*.scss',
         tasks: ['sass', 'autoprefixer'],
         options: {
           livereload: true,
@@ -14,7 +14,7 @@ module.exports = function(grunt) {
       },
 
       scripts: {
-        files: ['assets-build/js/**/*.js'],
+        files: ['src/js/**/*.js'],
         tasks: ['uglify'],
         options: {
           spawn: false,
@@ -30,19 +30,19 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          'assets/css/screen.css': 'assets-build/sass/screen.scss',
+          'assets/css/screen.css': 'src/sass/screen.scss',
         }
       },
     },
     autoprefixer: {
       options: {
-        browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']
+        browsers: ['last 4 version']
       },single_file: {
       options: {
         // Target-specific options go here.
       },
         src: 'assets/css/screen.css',
-        dest: 'assets/css/screen.min.css'
+        dest: 'style.css'
       },
     },
 
@@ -50,8 +50,8 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'assets/js/main.min.js': ['assets-build/js/**/*.js', '!assets-build/js/home/**/*.js'],
-          'assets/js/home.min.js': ['assets-build/js/home/**/*.js']
+          'assets/js/main.min.js': ['src/js/**/*.js', '!src/js/home/**/*.js'],
+          'assets/js/home.min.js': ['src/js/home/**/*.js']
         }
       }
     },
