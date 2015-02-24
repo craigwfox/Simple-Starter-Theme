@@ -1,0 +1,76 @@
+/* ------------------------------------------------------------------------
+===========================================================================
+  Grid
+===========================================================================
+------------------------------------------------------------------------ */
+  .grid-row {
+    margin-bottom: 1em;
+
+    @include clearfix;
+  }
+    .grid-col {
+      height: auto;
+
+      float: left;
+
+      padding:0 1em;
+
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      @include clearfix;
+    }
+
+    /* ----- Grid 1/5 ----- */
+      .grid-4-5 {
+        @extend .grid-col;
+
+        width: 80%;
+      }
+      .grid-3-5 {
+        @extend .grid-col;
+
+        width: 60%;
+      }
+      .grid-2-5 {
+        @extend .grid-col;
+
+        width: 40%;
+      }
+      .grid-1-5 {
+        @extend .grid-col;
+
+        width: 20%;
+      }
+    
+    /* ----- Grid 1/4 ----- */
+      .grid-3-4 {
+        @extend .grid-col;
+
+        width: 75%;
+      }
+      .grid-1-2 {
+        @extend .grid-col;
+
+        width: 50%;
+      }
+      .grid-1-4 {
+        @extend .grid-col;
+
+        width: 25%;
+      }
+
+    /* ----- Grid 1/3 ----- */
+      .grid-2-3 {
+        @extend .grid-col;
+
+        width: 66.666%;
+      }
+      .grid-1-3 {
+        @extend .grid-col;
+
+        width: 33.333%;
+      }
