@@ -15,9 +15,5 @@
       <p class="credits">&copy;<?php echo date('Y'); ?> <a href="https://github.com/craigwfox/Simple-Starter-Theme">Simple Starter Theme</a> by <a href="http://www.craigwfox.com">Craig Fox</a></p>
     </footer><!-- Site Footer -->
     <?php wp_footer() ?>
-    <?php if (is_front_page()) {?>
-      <script src="<?php echo get_template_directory_uri(); ?>/assets/js/home.min.js"></script>
-    <?php } ?>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.min.js"></script>
   </body>
 </html>

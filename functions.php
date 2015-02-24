@@ -22,6 +22,17 @@
 ------------------------------------- */
   wp_enqueue_script('jquery');
 
+function my_scripts() {
+  if ( !is_admin()) { // Check if admin page or not
+    wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/assets/main.min.js', array('jquery'), '1.0', true );
+    if (is_front_page()) {
+      wp_enqueue_script( 'home-scripts', get_template_directory_uri() . '/assets/home.min.js', array('jquery'), '1.0', true );
+    }
+    // This is putting scripts in the footer if needed in header change true to false
+  }
+}
+add_action( 'wp_enqueue_scripts', 'my_scripts' );
+
 
 /* -------------------------------------
   Pretty Home Page Title Tag
