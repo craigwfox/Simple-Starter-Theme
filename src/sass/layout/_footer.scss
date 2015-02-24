@@ -26,7 +26,28 @@
         padding: 0 1em;
       }
     }
+    
     .credits {
-      margin: 0;
-      padding: 0;
+     ul {
+      padding-left: 0;
+      padding-bottom: 0;
+
+      list-style-type: none;
+     }
+     li {
+      display: inline-block;
+      vertical-align: middle;
+
+      &:after {
+        content: "/";
+
+        margin-left: .875em;
+        margin-right: .575em;
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+     }
     }
