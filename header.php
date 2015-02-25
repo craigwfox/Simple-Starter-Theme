@@ -26,29 +26,35 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
   </head>
   <body <?php body_class( $class ); ?>>
     <header class="site-header">
+      <div class="site-header__top-bar">
+        <ul class="grid-1-2 site-header__contact">
+          <li>555 Some Street, Cool City US</li>
+          <li>(555) 555-5555</li>
+        </ul>
+        <ul class="grid-1-2 site-header__social">
+          <li><a href="#0" class="icon--facebook">Facebook</a></li>
+          <li><a href="#0" class="icon--twitter">Twitter</a></li>
+          <li><a href="#0" class="icon--instagram">Instagram</a></li>
+        </ul>
+      </div>
+
       <div class="grid-row">
+        <div class="grid-1-2 site-header__logo">
         <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
-        <div class="site-logo grid-1-2">
           <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'>
             <img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
           </a>
-        </div>
         <?php else : ?>
-        <div class="site-logo grid-1-2">
           <a href="<?php echo get_site_url(); ?>">
-            <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-            <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+            <h1 class="site-header__logo__title"><?php bloginfo( 'name' ); ?></h1>
+            <h2 class="site-header__logo__description"><?php bloginfo( 'description' ); ?></h2>
           </a>
-        </div>
         <?php endif; ?>
-        <div class="social grid-1-2">
-          <a href="#0" class="fb-icn">Facebook</a>
-          <a href="#0" class="twit-icn">Twitter</a>
-          <a href="#0" class="gplus-icn">Google Plus</a>
         </div>
       </div>
-      <nav class="site-nav">
-        <ul class="dropdown">
+
+      <nav class="site-header__nav">
+        <ul class="site-header__nav__list">
           <?php $menuParameters = array(
             'theme_location' => 'main_nav',
             'container'       => false,
@@ -60,4 +66,4 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
           ?>
         </ul>
       </nav>
-    </header><!-- Site Header -->
+    </header><?php // Site Header ?>

@@ -3,19 +3,19 @@
   Mixins
 ===========================================================================
 ------------------------------------------------------------------------ */
+  // ----- Base Element Wrapper 
+    @mixin wrapperEl($maxWidth: 1100px, $width: 95%) {
+      max-width: $maxWidth;
+      width: $width;
 
-  /* ---- Sprite for Global Sprite ---- */
-    @mixin sprite-global($w, $h, $x, $y) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  /* ---- Sprite Mixin ---- */
+    @mixin sst-sprite($w, $h, $x, $y) {
       width:$w;
       height:$h;
 
       background: url('../../assets/images/main-sprite.png') no-repeat $x $y;
-    }
-  
-  /* ---- Sprite with Variable Img ---- */
-    @mixin sprite-vari($w, $h, $x, $y, $url) {
-      width:$w;
-      height:$h;
-
-      background: $url no-repeat $x $y;
     }

@@ -1,5 +1,5 @@
-    <footer class="site-foot">
-      <section class="foot-nav">
+    <footer class="site-footer">
+      <section class="site-footer__nav">
         <ul>
           <?php $menuParameters = array(
             'theme_location' => 'footer_nav',
@@ -12,7 +12,7 @@
           ?>
         </ul>
       </section>
-      <div class="credits">
+      <div class="site-footer__credits">
         <ul>
           <li>&copy;<?php echo date('Y'); ?> <a href="https://github.com/craigwfox/Simple-Starter-Theme">Simple Starter Theme</a> by <a href="http://www.craigwfox.com">Craig Fox</a></li>
           <li>Something Else</li>

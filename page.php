@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <div class="main cf">
-      <section class="content grid-3-4 cf">
+      <section class="content grid-2-3">
         <h1 class="page-title"><?php the_title(); ?></h1>
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>

@@ -3,108 +3,131 @@
   Header
 ===========================================================================
 ------------------------------------------------------------------------ */
-  .site-header {
-    width: $widthMain;
+.site-header {
+  @include wrapperEl();
 
-    margin: 0 auto 1.875em;
-    padding: .5em 0;
+  padding-top: .575em;
+  padding-bottom: .575em;
+  margin-bottom: 1.875em;
 
-    border-bottom: 1px solid lighten($text,40%);
+  border-bottom: 1px solid lighten($text,40%);
+}
+
+
+/* ------------------------------
+  Site Header Top Bar
+------------------------------ */
+  .site-header__top-bar {
+    ul {
+      padding-left: 0;
+      padding-bottom: 0;
+
+      list-style-type: none;
+    }
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
-    .site-logo {
-      height: auto;
-      padding-top: .125em;
-      padding-bottom: .125em;
-
-      img {
-        // max-width: 100%;
-      }
-    }
-      .site-title {
-        padding: 0;
-      }
-      .site-description {
-        padding: 0;
-
-        font-size: 1.275rem;
-        font-weight: 300;
-      }
-
-
-  /* ------------------------------
-    Site Nav
-  ------------------------------ */
-    .site-nav {
-      padding: 1.375em 0 0;
+    .site-header__contact {}
+    .site-header__social {
+      text-align: right;
     }
 
-      .dropdown {
-        width:auto;
+
+/* ------------------------------
+  Site Header Logo
+------------------------------ */
+  .site-header__logo {
+    height: auto;
+    padding-top: .125em;
+    padding-bottom: .125em;
+  }
+    .site-header__logo__title {
+      padding: 0;
+    }
+    .site-header__logo__description {
+      padding: 0;
+
+      font-size: 1.275rem;
+      font-weight: 300;
+    }
+
+
+/* ------------------------------
+  Site Nav
+------------------------------ */
+  .site-header__nav {
+    padding: 1.375em 0 0;
+  }
+
+    .site-header__nav__list {
+      width:auto;
+
+      position:relative;
+      padding:0;
+
+      list-style:none;
+
+      li {
+        display: inline-block;
+        
+        position:relative;
+        margin:0 -4px 0 0;
+
+        font: normal normal 400 1.275em/1em $text-font;
+      }
+      a {
+        display:block;
 
         position:relative;
-        padding:0;
+        z-index:60;
+        padding: 0 .675em;
 
-        list-style:none;
+        &:hover {}
+      }
 
-        li {
-          display: inline-block;
-          
-          position:relative;
-          margin:0 -4px 0 0;
-
-          font: normal normal 400 1.275em/1em $text-font;
+      > li {
+        &:first-child {
+          a {
+            padding-left: 0;
+          }
         }
-        a {
+      }
+
+      /* -- Second Level -- */
+      ul {
+        width: 250px;
+
+        position: absolute;
+        top: 100%;
+        left: -2px;
+        z-index:50;
+        padding: .375em 0;
+
+        visibility: hidden;
+
+        background: rgba(230,230,230,.95);
+
+        li {        
+          position:relative;
+          z-index:110;
+          padding:0;
+          margin:0;
+
           display:block;
 
+          font-size: .975rem;
+        }
+
+        a {
           position:relative;
-          z-index:60;
-          padding: 0 .675em;
+          z-index:115;
+          display:block;
+
+          padding: .225em .5em;
 
           &:hover {}
         }
-
-        > li {
-          &:first-child {
-            a {
-              padding-left: 0;
-            }
-          }
-        }
-
-        /* -- Second Level -- */
-        ul {
-          width: 250px;
-
-          position: absolute;
-          top: 100%;
-          left: -2px;
-          z-index:50;
-          padding: .375em 0;
-
-          visibility: hidden;
-
-          background: rgba(230,230,230,.95);
-
-          li {        
-            position:relative;
-            z-index:110;
-            padding:0;
-            margin:0;
-
-            display:block;
-
-            font-size: .975rem;
-          }
-
-          a {
-            position:relative;
-            z-index:115;
-            display:block;
-
-            padding: .225em .5em;
-
-            &:hover {}
-          }
-        }
       }
+    }
