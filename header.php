@@ -19,7 +19,6 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
     <title><?php wp_title(); ?></title>
     <meta name="viewport" content="width=device-width" />
     <?php wp_head(); ?>
-    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <!--[if (gte IE 6)&(lte IE 8)]><script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script><![endif]-->
   </head>
   <body <?php body_class( $class ); ?>>
