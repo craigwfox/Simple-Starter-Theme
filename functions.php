@@ -18,17 +18,26 @@
 
 
 /* -------------------------------------
-  Add in jQuery
+  Add Enqueue Scripts
 ------------------------------------- */
-  wp_enqueue_script('jquery');
-
 function my_scripts() {
   if ( !is_admin()) { // Check if admin page or not
+
+    // deregister jquery and register it again but to load in the footer - This disables jquery migrate remove this if jquery migrate is needed
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', '/wp-includes/js/jquery/jquery.js', FALSE, '1.11.0', TRUE);
+    wp_enqueue_script('jquery');
+
+    // Enqueue Main Theme JS
     wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/assets/main.min.js', array('jquery'), '1.0', true );
+
+    // Enqueue Home Page JS
     if (is_front_page()) {
       wp_enqueue_script( 'home-scripts', get_template_directory_uri() . '/assets/home.min.js', array('jquery'), '1.0', true );
     }
-    // This is putting scripts in the footer if needed in header change true to false
+
+    // Enqueue Main Theme Stylesheet
+    wp_enqueue_style( 'main-theme-styles', get_stylesheet_uri() );
   }
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts' );
