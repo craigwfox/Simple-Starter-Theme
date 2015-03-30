@@ -29,11 +29,11 @@ function my_scripts() {
     wp_enqueue_script('jquery');
 
     // Enqueue Main Theme JS
-    wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/assets/main.min.js', array('jquery'), '1.0', true );
+    wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), '1.0', true );
 
     // Enqueue Home Page JS
     if (is_front_page()) {
-      wp_enqueue_script( 'home-scripts', get_template_directory_uri() . '/assets/home.min.js', array('jquery'), '1.0', true );
+      wp_enqueue_script( 'home-scripts', get_template_directory_uri() . '/assets/js/home.min.js', array('jquery'), '1.0', true );
     }
 
     // Enqueue Main Theme Stylesheet
