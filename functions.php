@@ -230,6 +230,13 @@ if ( ! isset( $content_width ) ) {
       return '<div class="iframe-wrap '.esc_attr($class_name).'">'.do_shortcode($content).'</div>';}
     add_shortcode('iframe_wrap', 'iframe_wrap_shortcode');
 
+    function anchor_link_shortcode($atts, $content = null) {
+      extract(shortcode_atts( array(
+        'anchor_id' => '',
+      ), $atts));
+      return '<div id="'.esc_attr($anchor_id).'">'.do_shortcode($content).'</div>';}
+    add_shortcode('anchor_link', 'anchor_link_shortcode');
+
 
   remove_filter('the_content', 'wpautop');
   remove_filter('the_content', 'wptexturize');
