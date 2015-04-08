@@ -17,5 +17,10 @@
       width:$w;
       height:$h;
 
-      background: url('../../assets/images/main-sprite.png') no-repeat $x $y;
+      display: block;
+
+      background: url('./assets/images/main-sprite.png') no-repeat $x $y;
+
+      text-align: left;
+      text-indent: -9999px;
     }

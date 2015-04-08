@@ -17,7 +17,8 @@
     body {
       margin:0;
       padding:0;
-      font: normal normal 300 16px/1.7em $text-font;
+      font-size: 16px;
+      font-family: $text-font;
       background-color:white;
     }
 
