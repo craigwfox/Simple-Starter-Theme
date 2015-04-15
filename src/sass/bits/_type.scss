@@ -4,11 +4,16 @@
 ===========================================================================
 ------------------------------------------------------------------------ */
   h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding:.675em 0 .125em;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: .675em;
+    padding-bottom: .125em;
 
     color:$headline;
-    font:normal normal 700 2em/1.2em $head-font;
+    font-size: 2em;
+    font-family: $head-font;
+    font-weight: 600;
+    line-height: 1.275em;
 
     a {
       color: $links;
@@ -26,7 +31,8 @@
   }
   
   h1 {
-    padding: 0 0 .25em;
+    padding-top: 0;
+    padding-bottom: .275em;
     
     font-size:2rem;
   }
@@ -53,10 +59,15 @@
 
   p, li, dl, dt, td, input, textarea, label, select {
     margin: 0;
-    padding:0 0 .675em;
-
-    font:normal normal 400 .975rem/1.725em $text-font;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: .675em;
+    
     color:$text;
+    font-size: .975rem;
+    font-weight: 400;
+    font-family: $text-font;
+    line-height: 1.725em;
   }
 
   del {
@@ -79,8 +90,6 @@
     padding: 0 0 1em 1.675em;
 
     li {
-      margin: 0;
-      padding: 0;
     }
 
     ul, ol {
@@ -127,7 +136,7 @@
     display: block;
 
     margin: 0;
-    padding: 2%;
+    padding: .475em;
 
     color: #f8f8f8;
 
