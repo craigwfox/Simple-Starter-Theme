@@ -14,46 +14,6 @@ Images(for the theme's design), scss, css, js, and fonts can be found in the ass
 
 ## Theme Features
 
-### Shortcodes
-**Grid Shortcodes**
-<table>
-  <tr>
-    <th>[grid_row]</th>
-    <td>Use to wrap all grid items.</td>
-  </tr>
-  <tr>
-    <th>[grid_1_3]</th>
-    <td>1/3 column</td>
-  </tr>
-  <tr>
-    <th>[grid_2_3]</th>
-    <td>2/3 column</td>
-  </tr>
-  <tr>
-    <th>[grid_1_4]</th>
-    <td>1/4 column</td>
-  </tr>
-  <tr>
-    <th>[grid_1_2]</th>
-    <td>1/2 column</td>
-  </tr>
-  <tr>
-    <th>[grid_3_4]</th>
-    <td>3/4 column</td>
-  </tr>
-</table>
-
-All of the grid shortcodes have an opening and an closing as the example shows below. Also all grid shortcodes have a class_name attribute to add classes for styling.
-
-        [grid_row]
-          [grid_1_3 class_name="some_class"]
-            Some Content
-          [/grid_1_3]
-          [grid_2_3]
-            More Content
-          [/grid_2_3]
-        [/grid_row]
-
 **Misc Shortcodes**<br />
 *Div with a class*
 <table>
