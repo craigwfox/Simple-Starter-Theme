@@ -1,6 +1,7 @@
 # Simple Starter Theme
-**By:** Craig Fox - | [craigwfox.com](http://craigwfox.com)
-**URL:** https://github.com/craigwfox/Simple-Starter-Theme
+- **By:** Craig Fox - | [craigwfox.com](http://craigwfox.com)
+- **URL:** https://github.com/craigwfox/Simple-Starter-Theme
+
 This theme is meant to be a lightweight start for wordpress theme develoment.
 
 #### Dependencies:
