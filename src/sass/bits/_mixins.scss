@@ -1,26 +1,31 @@
-/* ------------------------------------------------------------------------
-===========================================================================
-  Mixins
-===========================================================================
------------------------------------------------------------------------- */
-  // ----- Base Element Wrapper 
-    @mixin wrapperEl($maxWidth: 1100px, $width: 95%) {
-      max-width: $maxWidth;
-      width: $width;
+/* ---------------------------------------------
+   ======---------------------------------======
+    Mixins
+   ======---------------------------------======
+--------------------------------------------- */
+/* ====---------------====
+  Base Element Wrapper
+====---------------==== */
+  @mixin wrapperEl($maxWidth: 1100px, $width: 95%) {
+    max-width: $maxWidth;
+    width: $width;
 
-      margin-left: auto;
-      margin-right: auto;
-    }
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
 
-  /* ---- Sprite Mixin ---- */
-    @mixin sst-sprite($w, $h, $x, $y) {
-      width:$w;
-      height:$h;
+/* ====---------------====
+  Sprite Mixin
+====---------------==== */
+  @mixin sst-sprite($w, $h, $x, $y) {
+    width:$w;
+    height:$h;
 
-      display: block;
+    display: block;
 
-      background: url('./assets/images/main-sprite.png') no-repeat $x $y;
+    background: url('./assets/images/main-sprite.png') no-repeat $x $y;
 
-      text-align: left;
-      text-indent: -9999px;
-    }
+    text-align: left;
+    text-indent: -9999px;
+  }

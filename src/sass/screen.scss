@@ -19,19 +19,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ********************************************************************* */
   
-/* Variable and Mixins */ 
+// ===-- Variable and Mixins --===
   @import "bits/variables";
   @import "bits/mixins";
 
-/* Compass Calls and Resets */
+
+// ===-- Compass Calls and Resets --===
   @import "bits/reset";
 
-/* General Styles */
+
+// ===-- General Styles --===
   @import "bits/type";
   @import "bits/chunks";
   @import "bits/forms";
+  @import "bits/modules";
+  @import "bits/icons";
 
-/* Page Layout */
+
+// ===-- Page Layout --===
   @import "layout/grid";
   
   @import "layout/header";
@@ -40,7 +45,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   @import "layout/page";
   @import "layout/home";
 
-  @import "layout/media_queries";
+  @import "layout/media-queries";
 
-/* Misc */
-  @import "plugins/owl_slider";
+
+// ===-- Misc --===
+  @import "plugins/owl-slider";
