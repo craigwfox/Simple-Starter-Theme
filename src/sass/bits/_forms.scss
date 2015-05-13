@@ -9,24 +9,44 @@
 
   label {
     display: block;
-
-    padding: .675em 0 .275em;
-    margin: 0;
+    padding-bottom: .275em;
 
     font: normal 400 1rem/1em $text-font;
   }
 
   input, select, textarea {
-    max-width: 85%;
+    max-width: 100%;
+    width: auto;
 
     display: block;
 
-    margin: 0 0 .875em 0;
-    padding: .275em .5em;
+    padding: .175em .275em;
 
-    // box-sizing:border-box;
+    border: 1px solid #c3c3c3;
+    box-shadow: none;
 
-    font: normal 400 1rem/1em $text-font;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.375em;
+    font-family: $text-font;
+  }
+
+  input, textarea {
+    &:focus {
+      border: 1px solid $text;
+      box-shadow: inset 0 0 1px rgba(0,0,0,.2); 
+    }   
+  }
+
+
+  input.small, textarea.small {
+    width: 30%;
+  }
+  input.medium, textarea.medium {
+    width: 45%;
+  }
+  input.large, textarea.large {
+    width: 100%;
   }
 
   input[type=text] {}
@@ -40,13 +60,177 @@
     margin: 0 .375em 0 .5em;
   }
 
-  input[type=submit] {}
+  input[type=submit] {
+    padding-left: .575em;
+    padding-right: .575em;
+
+    border-radius: .275em;
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+
+    color: $headline;
+    font-size: 1.475em;
+    font-family: $head-font;
+    line-height: 1em;
+    text-transform: uppercase;
+
+    &:hover, &:focus {
+      border: 1px solid #efefef;
+
+      color: lighten($headline,10%);
+    }
+
+    &:active {
+      border: 1px solid #b5b5b5;
+
+      color: $headline;
+    }
+  }
 
   select {}
 
   option {}
 
   textarea {}
+
+
+/* ------------------------------
+  Gravity Forms
+------------------------------ */
+  .gform_body {
+    ul {
+      padding-left: 0;
+      padding-bottom: 0;
+
+      list-style-type: none;
+
+      li {
+        @include clearfix();
+
+        padding-bottom: .675em;
+      }
+    }
+    label {}
+  }
+  .gform_footer {
+    @include clearfix();
+
+    input[type=submit] {
+      float: right;
+    }
+  }
+
+  .gfield {
+    @include clearfix;
+    
+    margin-bottom: .675em;
+
+    input.large {
+      width: 100%;
+    }
+  }
+    .gfield_label {
+      font-weight: 600;
+    }
+
+  .gfield_radio, .gfield_checkbox {
+    li {
+      @include clearfix;
+
+      line-height: 1em;
+    }
+    input {
+      display: inline-block;
+      vertical-align: top;
+
+      margin-right: .775em;
+    }
+    label {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .ginput_complex  {}
+    .ginput_full, .ginput_left, .ginput_right {
+      display: block;
+
+      margin-bottom: .575em;
+
+      input {
+        width: 100%;
+      }
+      label {
+        margin-top: .175em;
+
+        font-size: .875em;
+        font-style: italic;
+      }
+    }
+    .ginput_full {
+      width: 100%;
+
+      clear: both;
+    }
+    .ginput_left {
+      width: 50%;
+
+      float: left;
+
+      padding-right: 1em;
+    }
+    .ginput_right {
+      width: 50%;
+
+      float: right;
+
+      padding-left: 1em;
+    }
+    
+    .validation_error {
+      padding: .175em .475em;
+      margin-bottom: .175em;
+
+      border: 1px solid #AF0005;
+    }
+
+    .gfield_description {}
+    .validation_message {
+      clear: both;
+      
+      color: #AF0005;
+    }
+
+
+
+/* ----- Gravity Forms - Sidebar Widgets ----- */
+  .widget {
+    input[type=text], input[type=email], input[type=radio], input[type=checkbox] {
+      width: 100%;
+    }
+    textarea {
+      max-height: 125px;
+    }
+
+    .gfield {
+      margin-bottom: 0;
+    }
+
+    .gform_body {
+      label {
+        width: 30%;
+
+        float: left;
+      }
+      .ginput_container {
+        width: 70%;
+       
+        float: left;
+       
+        display: inline-block;       
+      }
+    }
+  }
 
 
 /* --- Main Site Search Form --- */
