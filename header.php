@@ -1,13 +1,13 @@
 <!doctype html>
 <!-- ********************************************************************
-   _____            __                                    
-  / __(_)_ _  ___  / /__                                  
- _\ \/ /  ' \/ _ \/ / -_)                                 
-/___/_/_/_/_/ .__/_/\__/          ________                
-  / __/ /__/_/_____/ /____ ____  /_  __/ /  ___ __ _  ___ 
+   _____            __
+  / __(_)_ _  ___  / /__
+ _\ \/ /  ' \/ _ \/ / -_)
+/___/_/_/_/_/ .__/_/\__/          ________
+  / __/ /__/_/_____/ /____ ____  /_  __/ /  ___ __ _  ___
  _\ \/ __/ _ `/ __/ __/ -_) __/   / / / _ \/ -_)  ' \/ -_)
-/___/\__/\_,_/_/  \__/\__/_/     /_/ /_//_/\__/_/_/_/\__/ 
-                                                                        
+/___/\__/\_,_/_/  \__/\__/_/     /_/ /_//_/\__/_/_/_/\__/
+
 By Craig Fox @ craigwfox.com
 https://github.com/craigwfox/Simple-Starter-Theme.git
 ******************************************************************** -->
@@ -18,10 +18,18 @@ https://github.com/craigwfox/Simple-Starter-Theme.git
     <meta charset="utf-8" />
     <title><?php wp_title(); ?></title>
     <meta name="viewport" content="width=device-width" />
-    <?php wp_head(); ?>
+    <?php
+      wp_head();
+
+      if(is_front_page()) {
+        $bodyClass = 'page--front';
+      } else {
+        $bodyClass = 'page--main';
+      }
+    ?>
     <!--[if (gte IE 6)&(lte IE 8)]><script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script><![endif]-->
   </head>
-  <body <?php body_class( $class ); ?>>
+  <body <?php body_class( $bodyClass ); ?>>
     <header class="site-header">
       <div class="site-header__top-bar">
         <ul class="grid-1-2 site-header__contact">
