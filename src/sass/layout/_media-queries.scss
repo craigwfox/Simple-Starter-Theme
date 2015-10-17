@@ -1,27 +1,26 @@
 /* ---------------------------------------------
    ======---------------------------------======
-    Home Page - Styles for page_home.php
+    Media Queries
    ======---------------------------------======
 --------------------------------------------- */
 
 /* ====---------------====
-  Home -- Hero Slider
+  Break at 1000px
 ====---------------==== */
-  .hero-slider--home {
-    @include wrapperEl();
-  }
-
+  @media only screen and (max-width: 1000px) {}
 
 /* ====---------------====
-  Home -- Callouts
+  Break at 750px
 ====---------------==== */
-  .callouts--home {
-    @include wrapperEl();
-  }
+  @media only screen and (max-width: 750px) {
+    .grid-col {
+      width: 100%;
 
+      display: block;
+    }
+  }
 
 /* ====---------------====
-  Home -- Main
+  Break at 500px
 ====---------------==== */
-  .main--home {
-  }
+  @media only screen and (max-width: 500px) {}

@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
- 
-  $("#main-slider").owlCarousel({
+
+  if ($('.hero-slider__item').length > 1) {
+    $("#home-slider").owlCarousel({
       autoPlay : 5000,
       stopOnHover : false,
       navigation : true,
@@ -10,6 +11,7 @@ jQuery(document).ready(function($) {
       lazyLoad: true,
       lazyEffect: "fade",
       transitionStyle: "fade" 
-  });
+    });
+  }
  
 });
